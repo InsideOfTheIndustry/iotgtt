@@ -1,3 +1,3 @@
-module github.com/InsideOfTheIndustry/iotgtt
+module github.com/InsideOfTheIndustry/iotgtt/copyappend
 
 go 1.16

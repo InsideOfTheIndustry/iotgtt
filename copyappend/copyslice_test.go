@@ -1,33 +1,44 @@
 package copyappend
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestAppendSlice(t *testing.T) {
-	AppendSlice()
+	if actualValue := AppendSlice(NewTestSlice()); actualValue != expectedValue {
+		t.Errorf("got %v unexpected", actualValue)
+	}
 }
 
 func TestCopyslice(t *testing.T) {
-	CopySlice()
+	if actualValue := CopySlice(NewTestSlice()); actualValue != expectedValue {
+		t.Errorf("got %v unexpected", actualValue)
+	}
 }
 
 func TestForiSlice(t *testing.T) {
-	ForiSlice()
+	if actualValue := ForiSlice(NewTestSlice()); actualValue != expectedValue {
+		t.Errorf("got %v unexpected", actualValue)
+	}
 }
 
 func BenchmarkAppendSlice(t *testing.B) {
 	for n := 0; n < t.N; n++ {
-		AppendSlice()
+		AppendSlice(NewTestSlice())
 	}
 
 }
 
 func BenchmarkCopyslice(b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		CopySlice()
+		CopySlice(NewTestSlice())
 	}
 }
+
 func BenchmarkForiSlice(b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		ForiSlice()
+		ForiSlice(NewTestSlice())
 	}
 }
+
+var expectedValue = "2345671234567123456712345671234567123456712345671234567123456712345671234567123456712345671234567123456712345671234567123456712345671234567123456712345671234567123456712345671234567123456712345671234567123456712345671234567"
