@@ -16,3 +16,5 @@ Copy is more effective than append.
 
 ## calcu md5 of a file 
 slice the file is more effective than read the whole file to memeroy.
+
+## rand seed 
