@@ -1,3 +1,3 @@
-module github.com/InsideOfTheIndustry/iotgtt/testrand
+module github.com/InsideOfTheIndustry/iotgtt/randseed
 
 go 1.16
