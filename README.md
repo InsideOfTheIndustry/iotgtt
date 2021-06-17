@@ -23,3 +23,6 @@ slice the file is more effective than read the whole file to memeroy.
 ## string to []byte 
 Use pointer is much more faster. 
 使用反射和指针性能提升十分明显
+
+# Memory escape
+用使用指针一定比内存快？
