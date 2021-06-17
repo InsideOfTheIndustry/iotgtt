@@ -53,11 +53,10 @@ func TestConverStr2Byte(t *testing.T) {
 		for i := 0; i < len(actualValue); i++ {
 			if actualValue[i] != tC.expectedValue[i] {
 				t.Errorf("Got %v expected %v.", actualValue, tC.expectedValue)
-				goto failed
+				t.FailNow()
 			}
 		}
 	}
-failed:
 }
 
 func BenchmarkOriginByte2Str(b *testing.B) {
